@@ -6,10 +6,10 @@ gfortran -c outputmodule.f90
 gfortran -c SWBM_Linux.f90
 gfortran *.o -o ../bin/SWBM
 
-rm *.o
-rm *.mod0
-rm *.mod
+rm *.o 
+rm *.mod 
+chmod +x ../bin/SWBM
 
-echo SWBM successfully compiled
+[ -x ../bin/SWBM ] && echo "SWBM successfully compiled" || echo "SWBM compilation failed"
 
 
